@@ -1,5 +1,3 @@
-
-
 <?php
 $host = "db4free.net";
 $user = "mohamadev";          
