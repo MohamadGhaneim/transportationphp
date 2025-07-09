@@ -1,5 +1,13 @@
 FROM php:8.1-cli
 
+RUN apt-get update && apt-get install -y \
+    default-mysql-client \
+    libpq-dev \
+    libzip-dev \
+    unzip \
+    && docker-php-ext-install mysqli pdo pdo_mysql
+
+
 # مجلد العمل داخل الحاوية
 WORKDIR /var/www/html
 
